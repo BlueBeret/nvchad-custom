@@ -42,13 +42,13 @@ function M.initPresenceLoop()
     end, {['repeat'] = -1})
 end
 
+function M.stopPresenceLoop()
+    vim.fn.timer_stopall()
+end
 
 function M.updatePresence()
     -- get current edited filename
     local filename = vim.fn.expand('%:t')
-
-    -- get cursor positions
-    local cursor = vim.api.nvim_win_get_cursor(0)
 
     -- get repository name
     local repo = vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
@@ -59,8 +59,8 @@ function M.updatePresence()
     local config = {
       -- Your configuration data here
       details = "Tending " .. filename,
-      state = "Workspace: " .. repo .. " | " ..cursor[1] .. ":" .. cursor[2] .. " | " .. vim.fn.mode(),
-      large_text = "Editing " .. string.upper(language) .. " file",
+      state = "Workspace: " .. repo ,
+      large_text = "Editing a " .. string.upper(language) .. " file",
       large_image = image_name,
       small_image = "default",
       small_text = "Catttty",

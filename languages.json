@@ -337,7 +337,7 @@
         "nodemon.json$": {
             "image": "nodemon"
         },
-        "%.py.$": {
+        "%.py$": {
             "image": "python"
         },
         "package.json$": {
@@ -841,6 +841,9 @@
         "%.hjson$": {
             "image": "hjson"
         },
+        "%.html$": {
+            "image": "html"
+        },
         "/\\.x?html?$/i$": {
             "image": "html"
         },
@@ -1045,7 +1048,40 @@
         "/\\.git[\\/\\\\](.*[\\/\\\\])?(HEAD|ORIG_HEAD|packed-refs|logs[\\/\\\\](.+[\\/\\\\])?[^\\/\\\\]+)$/$": {
             "image": "manifest"
         },
-        "/\\.(md|mdown|markdown|mkd|mkdown|mdwn|mkdn|rmd|ron|pmd)$/i$": {
+        "%.md$": {
+            "image": "markdown"
+        },
+        "%.markdown$": {
+            "image": "markdown"
+        },
+        "%.mdown$": {
+            "image": "markdown"
+        },
+        "%.mdwn$": {
+            "image": "markdown"
+        },
+        "%.mkd$": {
+            "image": "markdown"
+        },
+        "%.mkdn$": {
+            "image": "markdown"
+        },
+        "%.mkdown$": {
+            "image": "markdown"
+        },
+        "%.ronn$": {
+            "image": "markdown"
+        },
+        "%.workbook$": {
+            "image": "markdown"
+        },
+        "%.wsd$": {
+            "image": "markdown"
+        },
+        "%.Rmd$": {
+            "image": "markdown"
+        },
+        "%.Rmarkdown$": {
             "image": "markdown"
         },
         "%.mdx$": {
@@ -1405,7 +1441,7 @@
         "%.msg$": {
             "image": "text"
         },
-        "/\\.(utxt|utf8)$/i$": {
+        "%.txt$": {
             "image": "text"
         },
         "%.toml$": {
@@ -1483,6 +1519,9 @@
         "/\\.ya?ml$/i$": {
             "image": "yaml"
         },
+        "%.yaml$": {
+            "image": "yaml"
+        },
         "/^yarn(\\.lock)?$/i$": {
             "image": "yarn"
         },
@@ -1492,7 +1531,10 @@
         "%.zig$": {
             "image": "zig"
         },
-        "/\\.(tfvars|tf)$/i$": {
+        ".tfvars$": {
+            "image": "terraform"
+        },
+        ".tf$": {
             "image": "terraform"
         }
     }
